@@ -44,6 +44,7 @@
 }
 
 - (IBAction)convertAction:(id)sender {
+    [self.view endEditing:true];
     if(!self.isCelsiusEditedLast
        && self.fahrenhietTextField.text != NULL
        && self.fahrenhietTextField.text.length > 0){
