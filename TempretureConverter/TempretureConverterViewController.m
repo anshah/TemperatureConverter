@@ -65,12 +65,10 @@
 }
 - (IBAction)beginEditingCelcius:(id)sender {
     self.isCelsiusEditedLast = true;
-    NSLog(@"Begin Editing Celcius");
 }
 
 - (IBAction)beginEditingFahrenheit:(id)sender {
     self.isCelsiusEditedLast = false;
-    NSLog(@"Begin Editing Fahrenheit");
 }
 
 - (IBAction)endEditing:(id)sender {
