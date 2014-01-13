@@ -37,16 +37,22 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UtY-zL-fpy">
-                    <rect key="frame" x="171" y="102" width="129" height="30"/>
+                    <rect key="frame" x="170" y="102" width="129" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                    <connections>
+                        <action selector="beginEditingFahrenheit:" destination="-1" eventType="editingDidBegin" id="nJV-s4-4X4"/>
+                    </connections>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aDV-qF-m6W">
-                    <rect key="frame" x="171" y="160" width="129" height="30"/>
+                    <rect key="frame" x="169" y="160" width="129" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                    <connections>
+                        <action selector="beginEditingCelcius:" destination="-1" eventType="editingDidBegin" id="EMF-Y8-uQq"/>
+                    </connections>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OV-bp-eIi">
                     <rect key="frame" x="29" y="239" width="271" height="46"/>
@@ -63,8 +69,12 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="4Cn-AT-OUm" appends="YES" id="eIu-av-gJo"/>
+            </connections>
         </view>
         <navigationController definesPresentationContext="YES" id="jDR-I6-yDe">
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -76,5 +86,10 @@
                 <autoresizingMask key="autoresizingMask"/>
             </navigationBar>
         </navigationController>
+        <tapGestureRecognizer id="4Cn-AT-OUm">
+            <connections>
+                <action selector="endEditing:" destination="-1" id="ciN-1B-Mtn"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>

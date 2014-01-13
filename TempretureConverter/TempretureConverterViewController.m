@@ -13,6 +13,10 @@
     @property (weak, nonatomic) IBOutlet UITextField *fahrenhietTextField;
     @property (weak, nonatomic) IBOutlet UITextField *celsiusTextField;
     - (IBAction)convertAction:(id)sender;
+    @property (nonatomic) BOOL isCelsiusEditedLast;
+    - (IBAction)beginEditingCelcius:(id)sender;
+    - (IBAction)beginEditingFahrenheit:(id)sender;
+- (IBAction)endEditing:(id)sender;
 
 @end
 
@@ -40,15 +44,16 @@
 }
 
 - (IBAction)convertAction:(id)sender {
-    
-    if(self.fahrenhietTextField.text != NULL
+    if(!self.isCelsiusEditedLast
+       && self.fahrenhietTextField.text != NULL
        && self.fahrenhietTextField.text.length > 0){
         
         float fahrenhietValue = [self.fahrenhietTextField.text floatValue];
         float celsiusValue = ((fahrenhietValue - 32) *5.0) / 9.0;
         self.celsiusTextField.text =  [NSString stringWithFormat:@"%1.2f",celsiusValue];
         
-    }else if(self.celsiusTextField.text != NULL
+    }else if(self.isCelsiusEditedLast
+             && self.celsiusTextField.text != NULL
              && self.celsiusTextField.text.length > 0){
         
         float celsiusValue = [self.celsiusTextField.text floatValue];
@@ -58,4 +63,18 @@
     }
     
 }
+- (IBAction)beginEditingCelcius:(id)sender {
+    self.isCelsiusEditedLast = true;
+    NSLog(@"Begin Editing Celcius");
+}
+
+- (IBAction)beginEditingFahrenheit:(id)sender {
+    self.isCelsiusEditedLast = false;
+    NSLog(@"Begin Editing Fahrenheit");
+}
+
+- (IBAction)endEditing:(id)sender {
+    [self.view endEditing:true];
+}
+
 @end
