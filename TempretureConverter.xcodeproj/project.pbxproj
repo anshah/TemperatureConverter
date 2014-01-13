@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6445F9F11883D5FC0025A2FD /* TempretureConverterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6445F9EF1883D5FC0025A2FD /* TempretureConverterViewController.m */; };
+		6445F9F21883D5FC0025A2FD /* TempretureConverterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6445F9F01883D5FC0025A2FD /* TempretureConverterViewController.xib */; };
 		6493DCFF1883D52700A59239 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6493DCFE1883D52700A59239 /* Foundation.framework */; };
 		6493DD011883D52700A59239 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6493DD001883D52700A59239 /* CoreGraphics.framework */; };
 		6493DD031883D52700A59239 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6493DD021883D52700A59239 /* UIKit.framework */; };
@@ -32,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6445F9EE1883D5FC0025A2FD /* TempretureConverterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempretureConverterViewController.h; sourceTree = "<group>"; };
+		6445F9EF1883D5FC0025A2FD /* TempretureConverterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempretureConverterViewController.m; sourceTree = "<group>"; };
+		6445F9F01883D5FC0025A2FD /* TempretureConverterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TempretureConverterViewController.xib; sourceTree = "<group>"; };
 		6493DCFB1883D52700A59239 /* TempretureConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TempretureConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6493DCFE1883D52700A59239 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6493DD001883D52700A59239 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -111,6 +116,9 @@
 				6493DD0E1883D52700A59239 /* AppDelegate.m */,
 				6493DD101883D52700A59239 /* Images.xcassets */,
 				6493DD051883D52700A59239 /* Supporting Files */,
+				6445F9EE1883D5FC0025A2FD /* TempretureConverterViewController.h */,
+				6445F9EF1883D5FC0025A2FD /* TempretureConverterViewController.m */,
+				6445F9F01883D5FC0025A2FD /* TempretureConverterViewController.xib */,
 			);
 			path = TempretureConverter;
 			sourceTree = "<group>";
@@ -221,6 +229,7 @@
 			files = (
 				6493DD091883D52700A59239 /* InfoPlist.strings in Resources */,
 				6493DD111883D52700A59239 /* Images.xcassets in Resources */,
+				6445F9F21883D5FC0025A2FD /* TempretureConverterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6493DD0F1883D52700A59239 /* AppDelegate.m in Sources */,
+				6445F9F11883D5FC0025A2FD /* TempretureConverterViewController.m in Sources */,
 				6493DD0B1883D52700A59239 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +451,7 @@
 				6493DD291883D52700A59239 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6493DD2A1883D52700A59239 /* Build configuration list for PBXNativeTarget "TempretureConverterTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +460,7 @@
 				6493DD2C1883D52700A59239 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
